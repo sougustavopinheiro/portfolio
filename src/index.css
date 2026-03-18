@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-heading: "Outfit", sans-serif;
+
+  --color-brand-light: #f9eaea;
+  --color-brand: #b21b1b;
+  --color-brand-dark: #8a1515;
+  --color-dark: #1a2738;
+  --color-lightbg: #f3f8ff;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--color-lightbg);
+  color: var(--color-dark);
+  font-family: var(--font-sans);
+}
+
+/* ajuste de quebra de linha (evita viúvas/órfãs) */
+p, span, li, a {
+  text-wrap: pretty;
+}
+
+/* balanceamento ótico dos títulos */
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
